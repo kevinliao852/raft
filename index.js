@@ -1,7 +1,7 @@
 import { socket } from 'axon';
 
 import Raft from './raft.js';
-import {createRamdomTimeout} from './utils.js'
+import {createRandomTimeout} from './utils.js'
 
 const ReqSock = socket('req');
 const Repsock = socket('rep');
@@ -12,7 +12,7 @@ Repsock.connect(4000);
 
 console.log('req server&rep client bind')
 
-let timeout = createRamdomTimeout();
+let timeout = createRandomTimeout();
 
 setInterval(()=>{
 
